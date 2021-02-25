@@ -1,0 +1,112 @@
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    height:100vh;
+    width:100%;
+    position: relative;
+}
+
+.search-area{
+    height:30vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+
+    h1{
+        text-align: center;
+        padding:1.2em;
+        color:#ffffff;
+        font-size:1.2em;
+        font-weight:500;
+        margin:0;
+    }
+
+    .form{
+        width:60%;
+        margin:auto;
+        display:flex;
+        input{
+            font-weight:700;
+            width:80%;
+            padding:1em;
+            border:none;
+            border-radius:15px 0 0 15px;
+
+        }
+        button{
+            padding:1em;
+            border:none;
+            border-radius: 0 15px 15px 0;
+            background-color: hsl(0, 0%, 17%);
+        }
+        input:hover, button:hover{
+            cursor: pointer;
+        } 
+    }
+}
+
+.display-area{
+    width:70%;
+    padding:1.3em 1.3em 2.3em 1.3em;
+    position: absolute;
+    bottom:22em;
+    left:0;
+    right:0;
+    margin:auto;
+    font-size:.85em;
+    font-weight:700;
+    display:grid;
+    grid-gap:.5em;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    background-color: #ffffff;
+    box-shadow: 3px 8px 30px rgba(0,0,0,0.4);
+    border-radius: 20px;
+    z-index: 400;
+    .display{
+        margin: .75em 0 0 0;
+        p{
+            margin:0;
+            text-align: center;
+            font-size:1.4em;
+        }
+        p:nth-child(odd){
+            padding: .5em;
+            color: hsl(0, 0%, 59%);
+            text-transform: uppercase;
+            font-size: .85em;
+        }
+    }
+
+    
+}
+
+.map-area{
+    height:70vh;
+    background-color: hsl(0, 0%, 59%);
+}
+
+@media only screen and (min-width:440px){
+    .display-area{
+        bottom:29em;
+    }
+}
+@media only screen and (min-width:800px){
+    .form{
+        width: 30% !important;
+    }
+}
+@media only screen and (min-width:890px){
+    .display-area{
+        bottom:32em;
+    }
+}
+@media only screen and (min-width: 934px){
+    .display-area{
+        padding:2.5em;
+        .display:nth-child(1n +2){
+            border-left: 1px solid hsl(0, 0%, 59%);
+        }
+    }
+}

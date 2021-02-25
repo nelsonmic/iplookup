@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ip-lookup</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="crossorigin=""/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="search-area" style="background-image: url(assets/pattern.png);">
+        <h1>IP Address Tracker</h1>
+        <div class="form">
+            <input type="text" name="user-input" id="user-input" placeholder="192.168.174.101">
+            <button id="button"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg></button>
+        </div>
+    </div>
+
+    <div class="map-area" id="map"></div>
+
+    <div class="display-area">
+        <div class="display">
+            <p class="desc">ip address</p>
+            <p id="ip"></p>
+        </div>
+        <div class="display">
+            <p class="desc">Location</p>
+            <p id="place"></p>
+        </div>
+        <div class="display">
+            <p class="desc">Timezone</p>
+            <p id="timezone"></p>
+        </div>
+        <div class="display">
+            <p class="desc">isp</p>
+            <p id="isp"></p>
+        </div>
+    </div>
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="crossorigin=""></script>
+<script src="app.js"></script>
+</body>
+</html>
